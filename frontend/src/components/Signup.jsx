@@ -3,17 +3,27 @@ import { useState } from "react";
 export default function Signup()
 {
     const [userdata, setUserData] =useState({fname:'',lname:'',dob:'',gender:''});
+    const [msg,setMsg] = useState('');
     const saveUser=()=>{
           //  console.log(userdata);
           axios.post('http://localhost:8081/adduser',{userdata}).then((response)=>{
-            console.log(response.data);
+            
+            if(response.data.result!="")
+            setMsg(response.data.result);
+            else if(response.data.error!="")
+                 { 
+                    console.log(response.data.error); 
+                    setMsg(response.data.error);
+                 }
           }).catch((error)=>{
+
             console.log(error);
           });
     }
         return (
                 <>
                 <section>
+                    <h3>{msg.length>0 && msg}</h3>
                 <table align="center">
             <tr>
                 <td>First name</td>
