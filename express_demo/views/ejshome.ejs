@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <h1>Ejs home page demo</h1>
+        <div style="background-color: orange;">Hello welcome to my site</div>
+        <p style="color:green;">
+<%=msg%>
+
+        </p>
+        <% for(let i=1;i<=10;i++) {  %>
+            <p <% if(i%2===0) { %> 
+                style="background-color:yellow;" <% } %>><%=i%></p>
+           <%}%> 
+    </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "express_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "multer": "^2.1.1",
+    "mysql2": "^3.22.3",
+    "nodemon": "^3.1.14"
+  }
+}
